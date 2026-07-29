@@ -60,7 +60,7 @@
 
             bindings = <
 &trans  &kp Q        &kp W            &kp E         &kp R        &kp T          &kp Y        &kp U            &kp I         &kp O        &kp P           &trans
-&trans  &hml LGUI A  &hml LEFT_ALT S  &hmr LCTRL D  &mt LSHFT F  &kp G          &kp H        &hmr RSHFT F     &hmr RCTRL K  &hmr RALT L  &hmr RGUI APOS  &trans
+&trans  &hml LGUI A  &hml LEFT_ALT S  &hmr LCTRL D  &mt LSHFT F  &kp G          &kp H        &hmr RSHFT J     &hmr RCTRL K  &hmr RALT L  &hmr RGUI APOS  &trans
 &trans  &lt 3 Z      &kp X            &kp C         &kp V        &kp B          &kp N        &kp M            &kp COMMA     &kp DOT      &lt 3 SLASH     &trans
                                       &lt 4 ESC     &lt 1 TAB    &lt 2 SPACE    &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
             >;
