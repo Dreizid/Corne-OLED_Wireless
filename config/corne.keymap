@@ -18,6 +18,34 @@
     behaviors {
         /* Left-hand Timeless HRM */
         /* Right-hand Timeless HRM */
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 18 30 39 40 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -31,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q    &kp W  &kp E      &kp R      &kp T          &kp Y        &kp U            &kp I         &kp O    &kp P        &kp BSPC
-&kp LALT   &kp A    &kp S  &kp D      &kp F      &kp G          &kp H        &kp J            &kp K         &kp L    &kp APOS     &kp RIGHT_GUI
-&kp LCTRL  &lt 3 Z  &kp X  &kp C      &kp V      &kp B          &kp N        &kp M            &kp COMMA     &kp DOT  &lt 3 SLASH  &kp LEFT_SHIFT
-                           &lt 4 ESC  &lt 1 TAB  &lt 2 SPACE    &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
+&trans  &kp Q        &kp W            &kp E         &kp R        &kp T          &kp Y        &kp U            &kp I         &kp O        &kp P           &trans
+&trans  &hml LGUI A  &hml LEFT_ALT S  &hmr LCTRL D  &mt LSHFT F  &kp G          &kp H        &hmr RSHFT F     &hmr RCTRL K  &hmr RALT L  &hmr RGUI APOS  &trans
+&trans  &lt 3 Z      &kp X            &kp C         &kp V        &kp B          &kp N        &kp M            &kp COMMA     &kp DOT      &lt 3 SLASH     &trans
+                                      &lt 4 ESC     &lt 1 TAB    &lt 2 SPACE    &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
             >;
         };
 
